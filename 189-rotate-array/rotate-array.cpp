@@ -5,9 +5,7 @@ public:
         if(n<=1){
             return;
         }
-        while(k>n){
-            k=k%n;
-        }
+        k=k%n;
         if(n>k){
         reverse(nums,0,n-k-1);
         reverse(nums,n-k,n-1);
