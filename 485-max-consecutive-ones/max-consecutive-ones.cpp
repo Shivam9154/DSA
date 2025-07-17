@@ -8,14 +8,9 @@ public:
                 count++;
             }
             else{
-                if(count>maxCount){
-                    maxCount=count;
-                }
                 count=0;
             }
-        }
-        if(count>maxCount){
-            maxCount=count;
+            maxCount=max(maxCount,count);
         }
         return maxCount;
     }
