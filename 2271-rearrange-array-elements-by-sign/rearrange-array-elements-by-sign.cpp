@@ -4,12 +4,12 @@ public:
         int n=nums.size();
         vector<int>v(n,0);
         int pos=0, neg=1;
-        for(int i=0;i<n;i++){
-            if(nums[i]>=0){
-                v[pos]=nums[i];
+        for(auto num:nums){
+            if(num>0){
+                v[pos]=num;
                 pos+=2;
             }else{
-                v[neg]=nums[i];
+                v[neg]=num;
                 neg+=2;
             }
         }
