@@ -4,14 +4,10 @@ public:
         int sum=0;
         int count=0;
         unordered_map<int,int>prefixMap;
+        prefixMap[0]=1;
         for(int i=0;i<nums.size();i++){
             sum+=nums[i];
-            if(sum==k){
-                count++;
-            } 
-            if(prefixMap.find(sum-k)!=prefixMap.end()){
-                count+=prefixMap[sum-k];
-            }
+            count+=prefixMap[sum-k];
             prefixMap[sum]++;
         }
         return count;
