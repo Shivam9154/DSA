@@ -4,8 +4,12 @@ public:
         if(x==INT_MIN || x==INT_MAX){
             return 0;
         }
-        int ans = 0, digit;
-        int temp = abs(x);
+        int ans = 0, digit,temp;
+        if(x<0){
+            temp=-x;
+        }else{
+            temp=x;
+        }
         while (temp != 0) {
             digit = temp % 10;
             if (ans > INT_MAX / 10) {
