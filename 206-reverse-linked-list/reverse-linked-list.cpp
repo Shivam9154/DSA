@@ -14,9 +14,7 @@ public:
         if(head==NULL || head->next==NULL){
             return head;
         }
-        ListNode *curr=head;
-        ListNode *prev=NULL;
-        ListNode *next=NULL;
+        ListNode *curr=head, *prev=NULL, *next=NULL;
         while(curr){
             next=curr->next;
             curr->next=prev;
