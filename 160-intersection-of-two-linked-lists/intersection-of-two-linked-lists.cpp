@@ -9,10 +9,7 @@
 class Solution {
 public:
     ListNode *getIntersectionNode(ListNode *headA, ListNode *headB) {
-        if(headA==headB || headA->next==headB){
-            return headB;
-        }
-        if(headB->next==headA){
+        if(headA==headB){
             return headA;
         }
         ListNode *p=headA,*q=headB;
