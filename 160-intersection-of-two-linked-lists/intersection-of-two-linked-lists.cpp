@@ -43,15 +43,12 @@ public:
                 p=p->next;
             }
         }
-        while(p->next!=NULL && q->next!=NULL){
+        while(p!=NULL && q!=NULL){
             if(p==q){
                 return p;
             }
             p=p->next;
             q=q->next;          
-        }
-        if(p==q){
-            return p;
         }
         return NULL;    
     }
