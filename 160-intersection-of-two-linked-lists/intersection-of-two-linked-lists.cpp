@@ -17,9 +17,6 @@ public:
         while(t1!=t2){
            t1= (t1==NULL)?headB:t1->next;
            t2= (t2==NULL)?headA:t2->next;
-           if(t1==t2){
-            return t1;
-           }
         }
         return t1;
     }
