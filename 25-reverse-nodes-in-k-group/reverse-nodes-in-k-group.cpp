@@ -28,7 +28,7 @@ public:
         ListNode *tail=p->next;
         ListNode *temp;
         ListNode *tailPrev;
-        int count=0;
+        bool isFirstGroup=true;
         while(p->next!=NULL){
             int i;
             for(i=1;i<=k&&p->next;i++){
@@ -37,8 +37,7 @@ public:
             if(i!=k+1){
                 break;
             }
-            count++;
-            if(count==1){
+            if(isFirstGroup){
                 ListNode *q=p->next;
                 p->next=NULL;
                 temp=reverseLL(tail);
@@ -47,6 +46,7 @@ public:
                 tail->next=q;
                 tail=tail->next;
                 tailPrev=p;
+                isFirstGroup=false;
             }else{
                 ListNode *q=p->next;
                 p->next=NULL;
