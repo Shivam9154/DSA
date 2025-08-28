@@ -40,6 +40,8 @@ public:
             temp=temp->next;
         }
        }
-       return dummyNode->next;
+       temp=dummyNode->next;
+       delete dummyNode;
+       return temp;
     }
 };
