@@ -2,6 +2,9 @@ class Solution {
 public:
     int minDays(vector<int>& bloomDay, int m, int k) {
         int low=1,high=bloomDay[0],mid,ans=-1;
+        if(float(m)/float(bloomDay.size())*float(k)>1){
+            return -1;
+        }
         for(int i=1;i<bloomDay.size();i++){
             high=max(high,bloomDay[i]);
         }
