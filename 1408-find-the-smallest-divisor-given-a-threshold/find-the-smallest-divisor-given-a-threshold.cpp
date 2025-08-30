@@ -1,17 +1,17 @@
 class Solution {
 public:
+    int sum(vector<int>&nums, int divisor){
+        int sum=0;
+        for(auto it:nums){
+            sum+=ceil(it/float(divisor));
+        }
+        return sum;
+    }
     int smallestDivisor(vector<int>& nums, int threshold) {
         int low = 1, high = *max_element(nums.begin(), nums.end()), mid;
-        int sum;
         while (low < high) {
-            mid = low + (high - low) / 2, sum = 0;
-            for (int i = 0; i < nums.size(); i++) {
-                sum += ceil(nums[i] / float(mid));
-                if(sum>threshold){
-                    break;
-                }
-            }
-            if (sum <= threshold) {
+            mid = low + (high - low) / 2;
+            if (sum(nums,mid) <= threshold) {
                 high = mid;
             } else {
                 low = mid + 1;
