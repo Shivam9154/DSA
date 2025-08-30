@@ -4,11 +4,12 @@ public:
         int low = 2, high = nums[0], mid;
         int sum = nums[0], ans;
         for (int i = 1; i < nums.size(); i++) {
-            if (sum <= INT_MAX - nums[i]) {
-                sum += nums[i];
-                if (nums[i] > high) {
-                    high = nums[i];
-                }
+            if (sum > INT_MAX - nums[i]) {
+                break;
+            }
+            sum += nums[i];
+            if (nums[i] > high) {
+                high = nums[i];
             }
         }
         if (sum <= threshold) {
