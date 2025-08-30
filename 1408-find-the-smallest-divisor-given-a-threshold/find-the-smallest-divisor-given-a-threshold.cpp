@@ -5,7 +5,7 @@ public:
         while (low < high) {
             mid = low + (high - low) / 2, sum = 0;
             for (int i=0;i<nums.size();i++) {
-                sum += ceil(nums[i] / double(mid));
+                sum += ceil(nums[i] / float(mid));
                 if (sum > threshold) {
                     break;
                 }
