@@ -4,8 +4,8 @@ public:
         int low = 1, high = *max_element(nums.begin(), nums.end()), mid, sum;
         while (low < high) {
             mid = low + (high - low) / 2, sum = 0;
-            for (auto it : nums) {
-                sum += ceil(it / double(mid));
+            for (int i=0;i<nums.size();i++) {
+                sum += ceil(nums[i] / double(mid));
                 if (sum > threshold) {
                     break;
                 }
