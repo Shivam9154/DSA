@@ -8,6 +8,9 @@ public:
         for(int i=1;i<bloomDay.size();i++){
             high=max(high,bloomDay[i]);
         }
+        if(m==1 && k==bloomDay.size()){
+            return high;
+        }
         int bouquetsCount=0;
         int adjacentCount=0;
         while(low<=high){
