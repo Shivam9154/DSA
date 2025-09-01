@@ -23,7 +23,7 @@ public:
                     break;
                 }
             }
-            if (capacity!=mid)
+            if (capacity != mid)
                 requiredDays++;
             if (requiredDays <= days) {
                 high = mid;
