@@ -17,16 +17,14 @@ public:
        vector<int>v;
        TreeNode* p=root;
        while(p || !s.empty()){
-        if(p){
+        while(p){
             v.push_back(p->val);
-            if(p->right){
-                s.push(p->right);
-            }
+            s.push(p);
             p=p->left;
-        }else{
-            p=s.top();
-            s.pop();
         }
+        p=s.top();
+        s.pop();
+        p=p->right;
        }
        return v;
     }
