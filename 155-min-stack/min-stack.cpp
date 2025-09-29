@@ -3,7 +3,7 @@ class MinStack {
     long long mini;
 public:
     MinStack() {
-        mini=LLONG_MAX;
+        mini=INT_MAX;
     }
     
     void push(int val) {
